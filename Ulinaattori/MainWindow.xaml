@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ulinaattori"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Ulinaattori" SizeToContent="Height" Width="265.112" Background="SlateGray" WindowStyle="ToolWindow">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label>ZMQ URL</Label>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox VerticalContentAlignment="Center" Name="zmqURL" />
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Separator />
+        </Grid>
+        <Grid Grid.Row="2">
+            <StackPanel Name="optionStackPanel">
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Separator />
+        </Grid>
+        <Grid Grid.Row="4">
+            <Button Name="btnStartListen" Click="onStartListening">start listening</Button>
+        </Grid>
     </Grid>
 </Window>
